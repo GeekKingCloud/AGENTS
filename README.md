@@ -19,6 +19,9 @@ The root `AGENTS.md` is the small, predictable entry point. It contains the dura
 | `workflows/subagents.md` | Purposeful roles, debate structure, dispatch, and integration. |
 | `workflows/implementation-finish.md` | Proportional cleanup of AI-heavy scaffolding, brittle tests, narration, and residue after behavior works. |
 | `workflows/verification.md` | Checks, proof states, provenance, and evidence boundaries. |
+| `workflows/pull-requests.md` | Pull-request preparation, content, readiness, and publication boundaries. |
+| `workflows/pull-request-reviews.md` | Evidence-bound review of a pull request or accumulated change set. |
+| `workflows/review-comments.md` | Proportionate handling and disposition of review comments. |
 | `workflows/handoff.md` | Restart-safe state and exact work-location reporting. |
 | `workflows/repository-guidance.md` | Ownership split for `AGENTS.md`, `CONTEXT.md`, `STYLE.md`, and related files. |
 | `templates/TASK-BRIEF.md` | Durable task control state when a brief helps. |

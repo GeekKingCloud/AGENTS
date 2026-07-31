@@ -11,6 +11,9 @@ Load only the guidance the task needs. When a row matches, read those files befo
 | Work | Read next |
 | --- | --- |
 | Software work, tests, Git, or development tooling | `instructions/development.md`, `workflows/verification.md` |
+| Prepare, open, update, or hand off a pull request | `workflows/pull-requests.md` |
+| Review pull-request changes | `workflows/pull-request-reviews.md` |
+| Assess or handle a pull-request review comment | `workflows/review-comments.md` |
 | Skills, prompts, harnesses, or release hardening | `instructions/skills.md` |
 | Multi-agent work, peer review, or model routing | `workflows/subagents.md` |
 | Web research or source evaluation | `instructions/research.md` |
