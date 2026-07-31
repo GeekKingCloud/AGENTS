@@ -23,6 +23,7 @@ The root `AGENTS.md` is the small, predictable entry point. It contains the dura
 | `workflows/pull-request-reviews.md` | Evidence-bound review of a pull request or accumulated change set. |
 | `workflows/review-comments.md` | Proportionate handling and disposition of review comments. |
 | `workflows/handoff.md` | Restart-safe state and exact work-location reporting. |
+| `workflows/workspace-cleanup.md` | Safe retirement of task-created files, processes, worktrees, containers, and other resources. |
 | `workflows/repository-guidance.md` | Ownership split for `AGENTS.md`, `CONTEXT.md`, `STYLE.md`, and related files. |
 | `templates/TASK-BRIEF.md` | Durable task control state when a brief helps. |
 | `templates/PLAN.md` | Verification-linked plan for multi-step work. |

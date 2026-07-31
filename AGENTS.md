@@ -22,6 +22,7 @@ Load only the guidance the task needs. When a row matches, read those files befo
 | Conversational or owner-facing assistant work | `instructions/personal-assistant.md` |
 | Secrets, accounts, permissions, public/private boundaries | `instructions/security-and-privacy.md` |
 | Interrupted work or context transfer | `workflows/handoff.md` |
+| Pause, finish, or retire task-created files, processes, worktrees, containers, or other resources | `workflows/workspace-cleanup.md` |
 | Repository guidance such as `AGENTS.md`, `STYLE.md`, or `CONTEXT.md` | `workflows/repository-guidance.md` |
 
 ## Task Contract
@@ -47,6 +48,7 @@ Before substantial work, establish these control points. Infer them from the req
 - Explain material tradeoffs before changes to behavior, architecture, dependencies, security, cost, performance, or public interfaces.
 - Shift stance deliberately as the work needs—implementer, investigator, maintainer, critic, verifier, operator, or assistant—and make the active judgment standard clear when it matters.
 - Use temporary probes when they reduce uncertainty, but do not commit or scatter scratch artifacts. Clean up anything made obsolete by the work.
+- Treat cleanup as destructive work: prove ownership, target narrowly, and preserve active, shared, unknown, valuable, or uniquely recoverable state.
 - For multi-step work, keep a short plan tied to proof; use `templates/PLAN.md` when it should persist. Generate, evaluate, repair, and continue while each pass reduces meaningful risk.
 - Diagnose repeated or expensive failures before retrying. A retry without new evidence usually reproduces the same failure.
 - Do not claim completion from intentions, stale output, or the wrong source. Report the actual checks, provenance, gaps, and remaining risk.

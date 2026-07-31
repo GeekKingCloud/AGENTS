@@ -26,6 +26,7 @@ REQUIRED_FILES = {
     "workflows/review-comments.md",
     "workflows/subagents.md",
     "workflows/verification.md",
+    "workflows/workspace-cleanup.md",
     "templates/HANDOFF.md",
     "templates/PLAN.md",
     "templates/TASK-BRIEF.md",
@@ -47,6 +48,7 @@ ROOT_ROUTES = {
     "workflows/review-comments.md",
     "workflows/subagents.md",
     "workflows/verification.md",
+    "workflows/workspace-cleanup.md",
     "templates/TASK-BRIEF.md",
     "templates/PLAN.md",
 }
@@ -111,6 +113,11 @@ POLICY_SMOKE_MARKERS = {
     "workflows/review-comments.md": [
         "Three dispositions",
         "does not authorize a reply",
+    ],
+    "workflows/workspace-cleanup.md": [
+        "Never remove the active checkout or worktree",
+        "Independent review does not authorize deletion",
+        "daemon-wide prune",
     ],
     "instructions/operations.md": ["stall rule", "root-cause pass before retrying"],
 }

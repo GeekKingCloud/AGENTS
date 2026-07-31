@@ -22,6 +22,6 @@ Do not put transient agent work papers under durable `docs/`, and do not include
 - confirm the reported path, branch, commits, and status are current
 - when the current task authorizes pushing the working branch, push accumulated commits before a foreseeable interruption or handoff when remote continuity is safer; otherwise preserve them locally and report the exact hashes
 - update or remove stale temporary handoff notes
-- clean scratch artifacts and temporary processes
+- apply the [workspace cleanup workflow](workspace-cleanup.md), and name every intentionally retained resource or unresolved cleanup target
 - distinguish completed work from next work
 - leave the tree understandable and state the narrowest command or action that resumes it
