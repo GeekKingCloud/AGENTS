@@ -25,7 +25,7 @@ After a failed or stuck run, do a root-cause pass before retrying: what stalled,
 ## Services and Scheduled Work
 
 - Use the environment's process manager for long-running services when available; verify readiness with a health check or direct log signal.
-- Clean up temporary servers, watchers, pollers, and jobs when the terminal condition is reached.
+- Clean up temporary servers, watchers, pollers, and jobs when the terminal condition is reached, following the [workspace cleanup workflow](../workflows/workspace-cleanup.md).
 - Keep scheduled prompts self-contained; future runs must not depend on hidden chat context.
 - Sanitize status and failures. Do not leak tokens, private IDs, raw logs, tracebacks, or unnecessary local paths.
 - Do not restart or stop a service from inside the active request path when it could kill the process producing the current response. Use an external control plane or ask the owner.
