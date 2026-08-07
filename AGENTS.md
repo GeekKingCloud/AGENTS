@@ -33,6 +33,7 @@ Before substantial work, establish these control points. Infer them from the req
 - **Source of truth:** the branch, raw input, ticket, documentation, or live state that decides correctness.
 - **Deliverable shape and boundary:** guidance, implementation, diagnosis, evidence, or artifact; what may change; and the least machinery needed by the intended operator.
 - **Autonomy:** whether to act, recommend, ask, or stop at a review gate.
+- **Execution gate:** planning needs permission before significant work or expansion.
 - **Review gate:** self-review, purposeful sub-agents, Roast, or another required reviewer.
 - **Success check:** observable evidence that proves the requested outcome.
 - **Stop rule:** ambiguity, failed proof, stalled work without new evidence, or a new authority boundary.

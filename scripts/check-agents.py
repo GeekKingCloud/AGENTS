@@ -63,6 +63,17 @@ POLICY_SMOKE_MARKERS = {
         "Push back briefly when a request is more complex than needed",
         "Deliverable shape",
         "Do not replace the intended operator's reasoning",
+        "Execution gate",
+        "planning needs permission",
+    ],
+    "instructions/personal-assistant.md": [
+        "Acknowledge receipt of every owner message",
+        "mid-turn steering",
+        "fifteen to twenty minutes of unexplained silence",
+        "Receipt acknowledgement and progress reporting are different obligations",
+        "Planning and execution are separate phases",
+        "ask to start before substantial work",
+        "get the owner's choice before proceeding",
     ],
     "instructions/development.md": [
         "native harness is the default",
@@ -72,6 +83,8 @@ POLICY_SMOKE_MARKERS = {
         "implementation finish workflow",
         "When the consumer is another capable coding agent",
         "Never push, create or update a pull request",
+        "present narrow and expanded options",
+        "get the owner's choice",
     ],
     "workflows/implementation-finish.md": [
         "Remove Unjustified Machinery",

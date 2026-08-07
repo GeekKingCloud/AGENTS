@@ -12,6 +12,7 @@ Use this file for implementation, debugging, refactoring, tests, repository main
 ## Implementation Taste
 
 - Make the smallest behavior-owning change that solves the current problem.
+- Before broadening a bounded request into longer-term or production-ready work, present narrow and expanded options with the material time, complexity, and maintenance tradeoffs, then get the owner's choice.
 - Match local architecture, naming, error handling, dependency choices, and formatting unless changing them is part of the request.
 - Preserve public interfaces unless a breaking change is requested and its migration cost is understood.
 - Add a helper, module, class, abstraction, or configuration surface only when it owns a real concept, removes demonstrated repetition, or protects an important boundary.
