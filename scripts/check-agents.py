@@ -71,6 +71,8 @@ POLICY_SMOKE_MARKERS = {
         "mid-turn steering",
         "fifteen to twenty minutes of unexplained silence",
         "Receipt acknowledgement and progress reporting are different obligations",
+        "Do not present a draft as action-ready",
+        "material background work",
         "Planning and execution are separate phases",
         "ask to start before substantial work",
         "get the owner's choice before proceeding",
@@ -114,6 +116,9 @@ POLICY_SMOKE_MARKERS = {
         "Never silently substitute self-review",
         "wait briefly, harvest and close completed threads, then retry once",
         "Review findings are inputs, not requirements",
+        "Owner-facing finality while work is pending",
+        "could still change the recommendation",
+        "superseded work",
     ],
     "workflows/verification.md": [
         "Verified",
