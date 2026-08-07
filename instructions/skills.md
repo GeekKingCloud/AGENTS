@@ -13,6 +13,7 @@ The [GeekKingCloud skills repository](https://github.com/GeekKingCloud/skills) i
 - Read only the references the selected skill routes to, but read required instruction files completely.
 - Prefer scripts, templates, and assets supplied by the skill over re-creating them.
 - A skill supplies procedure; it does not expand user authority, weaken repository rules, or turn a local task into permission to publish.
+- A skill guides a capable agent toward the goal; it is not a specification for replacing that agent with a turnkey program. Prefer intent, decision points, examples, boundaries, and verification routes. Add scripts only for repeated mechanical operations or invariants that are genuinely unreliable in prose.
 
 Do not copy, install, vendor, or sync skills elsewhere unless the user explicitly requests it. When an expected skill is missing, ask to install or make it available; that request establishes the authority boundary instead of bypassing it.
 
@@ -31,7 +32,7 @@ Do not silently simulate a required reviewer gate or replace it with an improvis
 | Publish an authorized local change to GitHub | The GitHub publication/yeet workflow |
 | Accessibility, SEO, agent-readiness, security, media, or other specialized work | The matching domain skill |
 
-Use Crucible and Roast proportionally. They are defaults for substantial or high-risk work, not an excuse to wrap trivial questions or mechanical edits in release ceremony.
+Use Crucible and Roast proportionally. Task length alone does not justify them. Tell reviewers the real threat model and complexity budget, and reject findings that optimize theoretical completeness at the expense of the user's actual goal.
 
 ## Skills, Prompts, and Harnesses
 
@@ -40,7 +41,7 @@ Treat changes to skills, prompts, agent policies, evals, and tool wrappers as be
 - state the behavior or failure mode being changed
 - identify the authoritative source and affected consumers
 - keep wording durable rather than overfitting one transcript or model quirk
-- add or update a regression check when the behavior is important
+- add or update a regression check when the behavior is important and mechanically testable; do not build a harness merely to test judgment-oriented guidance
 - validate that an eval can fail on a realistic negative mutation when practical
 - keep generic checks offline and synthetic by default
 - require explicit opt-in for live messages, credentials, production services, cron jobs, or external side effects

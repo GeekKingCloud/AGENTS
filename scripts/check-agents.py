@@ -61,6 +61,8 @@ POLICY_SMOKE_MARKERS = {
         "Never push, create or update a pull request",
         "exact repository/worktree path, branch, commits",
         "Push back briefly when a request is more complex than needed",
+        "Deliverable shape",
+        "Do not replace the intended operator's reasoning",
     ],
     "instructions/development.md": [
         "native harness is the default",
@@ -68,6 +70,7 @@ POLICY_SMOKE_MARKERS = {
         "atoshell",
         "g8ldfish",
         "implementation finish workflow",
+        "When the consumer is another capable coding agent",
         "Never push, create or update a pull request",
     ],
     "workflows/implementation-finish.md": [
@@ -83,6 +86,7 @@ POLICY_SMOKE_MARKERS = {
         "ask to install or make it available",
         "read its nearest `AGENTS.md`",
         "Do not copy, install, vendor, or sync skills elsewhere",
+        "not a specification for replacing that agent with a turnkey program",
     ],
     "workflows/subagents.md": [
         "Proposer",
@@ -93,6 +97,7 @@ POLICY_SMOKE_MARKERS = {
         "Do not vote, average opinions",
         "Never silently substitute self-review",
         "wait briefly, harvest and close completed threads, then retry once",
+        "Review findings are inputs, not requirements",
     ],
     "workflows/verification.md": [
         "Verified",
@@ -101,6 +106,7 @@ POLICY_SMOKE_MARKERS = {
         "Blocked",
         "fresh",
         "reviewer-backed",
+        "Do not convert every unproved theoretical case into scope",
     ],
     "workflows/pull-requests.md": [
         "complete accumulated diff",
