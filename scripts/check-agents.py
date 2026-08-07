@@ -85,6 +85,9 @@ POLICY_SMOKE_MARKERS = {
         "Never push, create or update a pull request",
         "present narrow and expanded options",
         "get the owner's choice",
+        "batch logically related repairs",
+        "Do not run the full repository suite after every small tweak",
+        "broader gates at meaningful integration milestones",
     ],
     "workflows/implementation-finish.md": [
         "Remove Unjustified Machinery",

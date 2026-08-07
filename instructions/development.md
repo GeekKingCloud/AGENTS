@@ -32,6 +32,8 @@ That workflow owns implementation quality and task-diff residue. Use the [worksp
 
 When expected behavior is clear, prefer a concrete failing test or reproduction before the fix. Confirm that it fails for the right reason, implement the minimal correction, rerun the focused check, then broaden only when the changed surface warrants it.
 
+During iteration, use the smallest relevant test or subsystem check and batch logically related repairs before paying for a broader suite. Do not run the full repository suite after every small tweak or push trivial experiments merely to use hosted CI as a debugging loop. Run broader gates at meaningful integration milestones and the project-required full gate on the exact PR, merge, or release candidate; run them earlier when coupling, risk, or project rules make narrower evidence insufficient. Any later intersecting change invalidates only the evidence it can affect, not every unrelated check by default.
+
 If no formal test harness exists, use the closest real proof: typecheck, lint, build, smoke command, fixture, snapshot inspection, dry-run, or source-backed manual verification. Do not change a test merely to make it pass, and do not contort production behavior around a bad assertion.
 
 Commit durable tests when they protect an observable contract, regression, edge case, security boundary, or workflow expectation that could plausibly break again. Do not promote every temporary probe into permanent test scaffolding.
