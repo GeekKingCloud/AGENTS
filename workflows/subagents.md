@@ -56,4 +56,13 @@ If a thread limit appears, wait briefly, harvest and close completed threads, th
 
 The orchestrator owns the final decision. Resolve disagreement against the user's goal, source of truth, supported operating/threat model, complexity budget, observed evidence, risk, and simplicity. Review findings are inputs, not requirements: do not implement machinery for a theoretical edge case just because a reviewer can construct it. Do not vote, average opinions, or accept a confident sub-agent summary without checking it.
 
+### Owner-facing finality while work is pending
+
+A dispatched reviewer or sub-agent is an unresolved dependency until its result is harvested or deliberately declared non-material. Before sending an owner-facing update, classify each outstanding thread by whether it could still change the recommendation, instructions, affected scope, or safety claim.
+
+- While any material thread remains, report progress as provisional. Name what is complete and what is still pending, but do not tell the owner to send, run, merge, buy, delete, deploy, or otherwise act on the current draft.
+- Do not emit a polished copy/paste instruction merely to yield the turn while asynchronous work finishes. Wait for the material result, integrate it, verify the resulting recommendation, and then issue one action-ready answer.
+- If new owner steering changes or pauses the task, mark outstanding results from the superseded work as stale on arrival. They may inform later work, but they do not authorize resumption and must not trigger a second final answer for the old scope.
+- A non-material background task may remain only when its possible outcomes cannot alter the owner action. State that boundary explicitly rather than implying every check is complete.
+
 Final reporting should name the purposeful roles used, what they examined, which findings changed the work, and any required lens that was unavailable.
