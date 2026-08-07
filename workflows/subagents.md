@@ -54,6 +54,6 @@ Harvest completed results before spawning replacements. Verify findings against 
 
 If a thread limit appears, wait briefly, harvest and close completed threads, then retry once before treating capacity as a blocker.
 
-The orchestrator owns the final decision. Resolve disagreement against the user's goal, source of truth, observed evidence, risk, and simplicity. Do not vote, average opinions, or accept a confident sub-agent summary without checking it.
+The orchestrator owns the final decision. Resolve disagreement against the user's goal, source of truth, supported operating/threat model, complexity budget, observed evidence, risk, and simplicity. Review findings are inputs, not requirements: do not implement machinery for a theoretical edge case just because a reviewer can construct it. Do not vote, average opinions, or accept a confident sub-agent summary without checking it.
 
 Final reporting should name the purposeful roles used, what they examined, which findings changed the work, and any required lens that was unavailable.

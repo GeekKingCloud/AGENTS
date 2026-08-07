@@ -16,6 +16,8 @@ Use this file for implementation, debugging, refactoring, tests, repository main
 - Preserve public interfaces unless a breaking change is requested and its migration cost is understood.
 - Add a helper, module, class, abstraction, or configuration surface only when it owns a real concept, removes demonstrated repetition, or protects an important boundary.
 - Avoid defensive code for impossible states, broad catches that hide failures, compatibility shims with no active consumer, and cleanup unrelated to the requested outcome.
+- When the consumer is another capable coding agent, prefer a clear contract, examples, and falsifiable checks over automation that tries to make the agent's decisions for it. Deterministic code should protect bytes, structure, protocol, or another mechanical invariant—not editorial, architectural, or situational judgment.
+- Use the supported operating and threat model, not the strongest imaginable adversary. Accept and document low-value edge cases rather than growing a local utility into security or orchestration infrastructure.
 - Comment tricky invariants, surprising edge cases, and external constraints. Do not narrate obvious code or preserve stale reasoning.
 - Clean up files, branches, scaffolding, flags, and documentation made obsolete by the change; mention unrelated drift instead of silently expanding scope.
 

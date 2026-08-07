@@ -64,4 +64,4 @@ For harnesses and regression tests, prove the check can fail when practical. A t
 
 ## Adversarial completion pass
 
-Before calling substantial work complete, ask what the current checks do not prove, what the change might accidentally permit, which old behavior could regress, and whether a narrower implementation would meet the same acceptance criteria. If this reveals implementation cleanup, return to the [implementation finish workflow](implementation-finish.md), make the change, and rerun every affected check before carrying proof forward.
+Before calling substantial work complete, ask what the current checks do not prove, what the change might accidentally permit inside the supported operating model, which old behavior could regress, and whether a narrower implementation would meet the same acceptance criteria. Do not convert every unproved theoretical case into scope; document accepted limits when they are outside the task's threat model or complexity budget. If this reveals implementation cleanup, return to the [implementation finish workflow](implementation-finish.md), make the change, and rerun every affected check before carrying proof forward.
