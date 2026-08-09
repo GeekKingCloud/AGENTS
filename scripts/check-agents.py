@@ -105,6 +105,7 @@ POLICY_SMOKE_MARKERS = {
         "read its nearest `AGENTS.md`",
         "Do not copy, install, vendor, or sync skills elsewhere",
         "not a specification for replacing that agent with a turnkey program",
+        "keep natural-language evals bounded to required clauses, known realistic regressions, and other declared structural checks; do not grow a synonym list or semantic parser in pursuit of arbitrary paraphrase completeness",
     ],
     "workflows/subagents.md": [
         "Proposer",
@@ -116,6 +117,10 @@ POLICY_SMOKE_MARKERS = {
         "Never silently substitute self-review",
         "wait briefly, harvest and close completed threads, then retry once",
         "Review findings are inputs, not requirements",
+        "When two successive candidate reviews expose new variants of the same mechanism",
+        "each repair adds vocabulary, branches, exceptions, retries, or fixtures without reducing owner-visible risk",
+        "Do not add another special case merely to satisfy the latest counterexample",
+        "Revert experimental accretion",
         "Owner-facing finality while work is pending",
         "could still change the recommendation",
         "superseded work",
@@ -140,6 +145,7 @@ POLICY_SMOKE_MARKERS = {
     "workflows/review-comments.md": [
         "Three dispositions",
         "does not authorize a reply",
+        "A counterexample outside that boundary may justify a follow-up or documented limit, but it does not automatically become an in-scope defect",
     ],
     "workflows/workspace-cleanup.md": [
         "Never remove the active checkout or worktree",
