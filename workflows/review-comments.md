@@ -24,6 +24,8 @@ Give every actionable comment one explicit disposition:
 
 A follow-up record does not clear a material readiness risk in behavior changed by the current pull request. Fix that risk or obtain explicit acceptance from the authorized owner before claiming readiness.
 
+The supported operating and threat model is part of the review boundary. A counterexample outside that boundary may justify a follow-up or documented limit, but it does not automatically become an in-scope defect. If successive comments keep finding new phrasings or variants of one mechanism, stop extending the mechanism and apply the convergence rule in `subagents.md` before another repair cycle.
+
 Do not silently ignore actionable findings, accept reviewer claims without checking them, make unrelated opportunistic changes, or create vague backlog placeholders.
 
 ## Remote-action boundary

@@ -42,6 +42,7 @@ Treat changes to skills, prompts, agent policies, evals, and tool wrappers as be
 - identify the authoritative source and affected consumers
 - keep wording durable rather than overfitting one transcript or model quirk
 - add or update a regression check when the behavior is important and mechanically testable; do not build a harness merely to test judgment-oriented guidance
+- keep natural-language evals bounded to required clauses, known realistic regressions, and other declared structural checks; do not grow a synonym list or semantic parser in pursuit of arbitrary paraphrase completeness
 - validate that an eval can fail on a realistic negative mutation when practical
 - keep generic checks offline and synthetic by default
 - require explicit opt-in for live messages, credentials, production services, cron jobs, or external side effects
