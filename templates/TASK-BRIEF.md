@@ -1,5 +1,7 @@
 # Task Brief
 
+Use only the sections that help preserve durable control state. The brief is not a required owner-facing form for every substantial task.
+
 ## Mode
 
 implement / report-only / review / recovery / research.
@@ -20,9 +22,9 @@ Touch X, ignore Y, ask before Z.
 
 act / recommend / ask before mutation / stop at review / local-only / specifically authorized remote actions.
 
-## Review gate
+## Review approach, if warranted
 
-self-review / purposeful sub-agents with named roles / Roast / another required reviewer / explicitly unreviewed.
+proportionate self-review / purposeful sub-agents with named roles / Roast / another required reviewer / no separate review needed.
 
 ## Success check
 

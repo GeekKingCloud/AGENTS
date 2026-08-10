@@ -1,6 +1,6 @@
 # Workspace Cleanup
 
-Use this before pausing or finishing when a task created scratch files, logs, temporary tests or output, processes, servers, watchers, worktrees, containers, networks, caches, downloads, renders, or other local resources. It owns resource retirement across development, operations, computer use, research, and assistant work. A cleanup request is not blanket deletion authority and does not authorize remote artifact, cache, branch, run, or service mutation.
+Use this full workflow before pausing or finishing when a task created substantial or multiple scratch files, logs, temporary tests or output, processes, servers, watchers, worktrees, containers, networks, caches, downloads, renders, or other local resources, or when ownership, reversibility, or cleanup risk is non-trivial. Retire a small, exact, clearly task-owned disposable directly with a proportionate safety check. This workflow owns non-trivial resource retirement across development, operations, computer use, research, and assistant work. A cleanup request is not blanket deletion authority and does not authorize remote artifact, cache, branch, run, or service mutation.
 
 ## Design for retirement
 
