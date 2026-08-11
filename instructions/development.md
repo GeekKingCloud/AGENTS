@@ -26,7 +26,7 @@ Use this file for implementation, debugging, refactoring, tests, repository main
 
 After the requested behavior works and before final verification or commit, use the [implementation finish workflow](../workflows/implementation-finish.md). Review the task diff and directly affected flow for unnecessary scaffolding, speculative flexibility, brittle tests, narration, and residue. Preserve behavior, trust boundaries, durable coverage, and supported compatibility; this is a proportional finish pass, not permission for a broad refactor.
 
-That workflow owns implementation quality and task-diff residue. Use the [workspace cleanup workflow](../workflows/workspace-cleanup.md) to retire task-created scratch, processes, worktrees, containers, caches, and other local resources safely.
+That workflow owns implementation quality and task-diff residue. Use the full [workspace cleanup workflow](../workflows/workspace-cleanup.md) when the task created substantial or multiple local resources, or when ownership, reversibility, or risk is non-trivial. Retire small, exact, clearly task-owned disposable debris directly without turning cleanup into a separate programme.
 
 ## Tests and Verification
 

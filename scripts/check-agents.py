@@ -65,6 +65,10 @@ POLICY_SMOKE_MARKERS = {
         "Do not replace the intended operator's reasoning",
         "Execution gate",
         "planning needs permission",
+        "internal control points",
+        "Review approach, when warranted",
+        "Choose Crucible, Roast, or both",
+        "contract-required skill",
     ],
     "instructions/personal-assistant.md": [
         "Acknowledge receipt of every owner message",
@@ -105,6 +109,7 @@ POLICY_SMOKE_MARKERS = {
         "read its nearest `AGENTS.md`",
         "Do not copy, install, vendor, or sync skills elsewhere",
         "not a specification for replacing that agent with a turnkey program",
+        "optional procedural aid",
         "keep natural-language evals bounded to required clauses, known realistic regressions, and other declared structural checks; do not grow a synonym list or semantic parser in pursuit of arbitrary paraphrase completeness",
     ],
     "workflows/subagents.md": [
@@ -132,7 +137,7 @@ POLICY_SMOKE_MARKERS = {
         "Blocked",
         "fresh",
         "reviewer-backed",
-        "Do not convert every unproved theoretical case into scope",
+        "stop when proportionate evidence demonstrates the requested outcome",
     ],
     "workflows/pull-requests.md": [
         "complete accumulated diff",
@@ -151,6 +156,7 @@ POLICY_SMOKE_MARKERS = {
         "Never remove the active checkout or worktree",
         "Independent review does not authorize deletion",
         "daemon-wide prune",
+        "Retire a small, exact, clearly task-owned disposable directly",
     ],
     "instructions/operations.md": ["stall rule", "root-cause pass before retrying"],
 }

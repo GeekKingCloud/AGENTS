@@ -62,6 +62,6 @@ Docs-only changes still need verification:
 
 For harnesses and regression tests, prove the check can fail when practical. A test that cannot fail is decoration.
 
-## Adversarial completion pass
+## Bounded completion pass
 
-Before calling substantial work complete, ask what the current checks do not prove, what the change might accidentally permit inside the supported operating model, which old behavior could regress, and whether a narrower implementation would meet the same acceptance criteria. Do not convert every unproved theoretical case into scope; document accepted limits when they are outside the task's threat model or complexity budget. If this reveals implementation cleanup, return to the [implementation finish workflow](implementation-finish.md), make the change, and rerun every affected check before carrying proof forward.
+Before calling substantial work complete, compare the integrated result once against the requested outcome, explicit acceptance criteria, supported operating and threat model, and concrete risks observed during the task. Repair a real unmet criterion or regression and rerun the affected check. Do not create new requirements solely because another hypothetical counterexample, phrasing, or improvement can be generated; disposition accepted limits outside the task's threat model or complexity budget and stop when proportionate evidence demonstrates the requested outcome. If the bounded pass reveals task-diff residue, use the [implementation finish workflow](implementation-finish.md) for that concrete issue rather than beginning an open-ended critique loop.

@@ -15,7 +15,7 @@ The [GeekKingCloud skills repository](https://github.com/GeekKingCloud/skills) i
 - A skill supplies procedure; it does not expand user authority, weaken repository rules, or turn a local task into permission to publish.
 - A skill guides a capable agent toward the goal; it is not a specification for replacing that agent with a turnkey program. Prefer intent, decision points, examples, boundaries, and verification routes. Add scripts only for repeated mechanical operations or invariants that are genuinely unreliable in prose.
 
-Do not copy, install, vendor, or sync skills elsewhere unless the user explicitly requests it. When an expected skill is missing, ask to install or make it available; that request establishes the authority boundary instead of bypassing it.
+Do not copy, install, vendor, or sync skills elsewhere unless the user explicitly requests it. When a skill is required by a declared safety, review, or delivery contract, ask to install or make it available; that request establishes the authority boundary instead of bypassing it. When the skill is only an optional procedural aid, use a proportionate native alternative and state any material limitation rather than blocking automatically.
 
 Do not silently simulate a required reviewer gate or replace it with an improvised weaker workflow. An unrelated missing skill is not a reason to block.
 
@@ -23,7 +23,7 @@ Do not silently simulate a required reviewer gate or replace it with an improvis
 
 | Need | Preferred skill route |
 | --- | --- |
-| Substantial implementation or release hardening | Crucible to orchestrate, Roast as the strict evidence-backed gate |
+| High-risk implementation or release hardening | Crucible for orchestration, Roast for a strict evidence-backed gate, or both when each has a distinct purpose |
 | Blunt code, architecture, plan, or release-risk review | Roast |
 | Collaboration-history analysis and durable preference discovery | Feedback |
 | Locate a prior coding-agent conversation | Find |

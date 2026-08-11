@@ -22,11 +22,11 @@ Load only the guidance the task needs. When a row matches, read those files befo
 | Conversational or owner-facing assistant work | `instructions/personal-assistant.md` |
 | Secrets, accounts, permissions, public/private boundaries | `instructions/security-and-privacy.md` |
 | Interrupted work or context transfer | `workflows/handoff.md` |
-| Pause, finish, or retire task-created files, processes, worktrees, containers, or other resources | `workflows/workspace-cleanup.md` |
+| Substantial task-created resources or non-trivial cleanup ownership, reversibility, or risk | `workflows/workspace-cleanup.md` |
 | Repository guidance such as `AGENTS.md`, `STYLE.md`, or `CONTEXT.md` | `workflows/repository-guidance.md` |
 
 ## Task Contract
-Before substantial work, establish these control points. Infer them from the request when safe; state assumptions only when they affect direction or risk. Use `templates/TASK-BRIEF.md` when a durable brief helps.
+Infer these internal control points before substantial work; state only those affecting direction, risk, or authority. Use `templates/TASK-BRIEF.md` when useful.
 
 - **Mode:** implement, diagnose, report-only, review, research, recovery, or monitor.
 - **Target:** exact repository, path, branch, session, or artifact.
@@ -34,7 +34,7 @@ Before substantial work, establish these control points. Infer them from the req
 - **Deliverable shape and boundary:** guidance, implementation, diagnosis, evidence, or artifact; what may change; and the least machinery needed by the intended operator.
 - **Autonomy:** whether to act, recommend, ask, or stop at a review gate.
 - **Execution gate:** planning needs permission before significant work or expansion.
-- **Review gate:** self-review, purposeful sub-agents, Roast, or another required reviewer.
+- **Review approach, when warranted:** self-review, purposeful sub-agents, Roast, or another required reviewer.
 - **Success check:** observable evidence that proves the requested outcome.
 - **Stop rule:** ambiguity, failed proof, stalled work without new evidence, or a new authority boundary.
 
@@ -57,9 +57,9 @@ Before substantial work, establish these control points. Infer them from the req
 
 The [GeekKingCloud skills repository](https://github.com/GeekKingCloud/skills) is the default toolbelt that extends this baseline. Inspect the available skill catalog before substantial work; when the user names a skill or the task clearly matches one, read its `SKILL.md` completely and follow it.
 
-Use Crucible plus Roast when risk, irreversibility, public release, or genuine architectural uncertainty justifies their cost—not merely because a task is long. Use Feedback for collaboration-history analysis, Find for prior-session discovery, Handoff or Recover for restart safety, and the relevant domain skill for specialized assessments. `instructions/skills.md` owns the detailed policy.
+Choose Crucible, Roast, or both when risk, irreversibility, public release, or genuine architectural uncertainty justifies the cost—not merely because a task is long. Use Feedback for collaboration-history analysis, Find for prior-session discovery, Handoff or Recover for restart safety, and the relevant domain skill for specialized assessments. `instructions/skills.md` owns the detailed policy.
 
-If an expected skill is unavailable, ask to install or expose it rather than silently replacing a required workflow with a weaker approximation.
+If a contract-required skill is unavailable, ask to install or expose it rather than silently weakening the contract. For an optional aid, use a proportionate native alternative and state material limitations.
 
 ## Local and Remote Authority
 
