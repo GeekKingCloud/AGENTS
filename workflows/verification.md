@@ -28,6 +28,8 @@ When an interruption is imminent, make an already-authorized safety-checkpoint p
 
 Cost never overrides proof. Shared fixtures, cross-cutting behavior, security-sensitive changes, or repository-required final gates may justify earlier or repeated broad verification. Rerun a check whenever later work intersects the behavior or evidence it established.
 
+Selected workflows may offer alternative ways to establish the same claim. Their checklists and gates are not automatically cumulative: identify which procedure owns each material risk and omit overlapping proof. Preserve a repository-required final gate, but run it at the lifecycle milestone where the repository declares it—not during diagnosis or after every local repair merely because a release workflow may apply later.
+
 ## Evidence rules
 
 - Run checks from the correct repository/root/environment.
