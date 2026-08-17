@@ -9,10 +9,11 @@ The [GeekKingCloud skills repository](https://github.com/GeekKingCloud/skills) i
 - Before using or editing the skills repository, read its nearest `AGENTS.md` and treat that as the repository source of truth.
 - Inspect the available skill catalog before substantial work.
 - If the user names a skill, add it to the plan, read its `SKILL.md` completely, and follow it.
-- If the task clearly matches an available skill, say why it applies, read it, and use it without waiting for the user to know its name.
+- Choose at most one primary procedural skill when its trigger clearly matches the task. Say why it applies, read it, and use it without waiting for the user to know its name.
+- Add another skill only when the user or nearest repository explicitly requires it, the primary skill routes to it for a distinct step, or it owns a distinct capability required by the task contract. Do not accumulate overlapping review, testing, release, orchestration, or assurance workflows; their gates are not automatically cumulative.
 - Read only the references the selected skill routes to, but read required instruction files completely.
 - Prefer scripts, templates, and assets supplied by the skill over re-creating them.
-- A skill supplies procedure; it does not expand user authority, weaken repository rules, or turn a local task into permission to publish.
+- A skill supplies procedure; it does not expand user authority, scope, architecture, deliverables, verification budget, or supported operating model, weaken repository rules, or turn a local task into permission to publish.
 - A skill guides a capable agent toward the goal; it is not a specification for replacing that agent with a turnkey program. Prefer intent, decision points, examples, boundaries, and verification routes. Add scripts only for repeated mechanical operations or invariants that are genuinely unreliable in prose.
 
 Do not copy, install, vendor, or sync skills elsewhere unless the user explicitly requests it. When a skill is required by a declared safety, review, or delivery contract, ask to install or make it available; that request establishes the authority boundary instead of bypassing it. When the skill is only an optional procedural aid, use a proportionate native alternative and state any material limitation rather than blocking automatically.

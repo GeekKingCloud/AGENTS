@@ -1,6 +1,6 @@
 # Purposeful Sub-Agent Workflow
 
-Use sub-agents liberally on substantial work when parallel investigation, independent judgment, or focused expertise can improve the result. Do not spawn them merely to create activity: every sub-agent needs a role in the reasoning system.
+Use sub-agents purposefully when parallel investigation, independent judgment, or focused expertise materially improves the result. Task size alone does not justify delegation: every sub-agent needs a distinct contract-owned role, and the task's complexity budget limits fan-out and review rounds.
 
 ## Useful Roles
 
@@ -60,6 +60,8 @@ The orchestrator owns the final decision. Resolve disagreement against the user'
 
 A reviewer finding does not silently enlarge the supported operating or threat model. Give reviewers that boundary and the task's complexity budget before they begin, then disposition each finding as in scope, out-of-scope follow-up, disproved, or an explicitly accepted limit.
 
+Default to one broad review of the stable candidate when independent review is warranted. After repairing concrete blockers, use one focused confirmation of those findings plus the affected checks. Start another broad review only after a material redesign or when the owner or nearest repository explicitly requires it. Do not spawn replacement reviewers merely to increase confidence.
+
 When two successive candidate reviews expose new variants of the same mechanism, or each repair adds vocabulary, branches, exceptions, retries, or fixtures without reducing owner-visible risk, stop the patch loop. Do not add another special case merely to satisfy the latest counterexample. Revert experimental accretion, restate the user-visible invariant, inspect whether the mechanism is appropriate, and choose the smallest of:
 
 - a simpler structural or mechanical check;
@@ -68,6 +70,8 @@ When two successive candidate reviews expose new variants of the same mechanism,
 - a different design when the mechanism itself is wrong.
 
 Escalate to the owner only when that reassessment changes behavior, risk, cost, authority, or the promised deliverable. Otherwise apply the bounded correction and resume from a fresh exact candidate. Green checks and additional reviewers do not demonstrate convergence while the mechanism is still producing the same failure class.
+
+When work materially changes category or scope, or moves from one durable stage to a separately authorized next stage, checkpoint the useful state and begin that stage in fresh context. Historical review posture and unspent delegation capacity do not carry forward as requirements.
 
 ### Owner-facing finality while work is pending
 

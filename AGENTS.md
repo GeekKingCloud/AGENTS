@@ -1,6 +1,6 @@
 # Agent Working Preferences
 
-This is my default operating baseline for coding agents and adjacent assistants. It is intentionally personal: follow these preferences for my work instead of diluting them into a generic starter kit.
+This is my personal operating baseline for coding agents and adjacent assistants.
 
 ## Start Here
 
@@ -35,8 +35,11 @@ Infer these internal control points before substantial work; state only those af
 - **Autonomy:** whether to act, recommend, ask, or stop at a review gate.
 - **Execution gate:** planning needs permission before significant work or expansion.
 - **Review approach, when warranted:** self-review, purposeful sub-agents, Roast, or another required reviewer.
+- **Complexity budget:** allowed new machinery, broad checks, and review rounds.
 - **Success check:** observable evidence that proves the requested outcome.
 - **Stop rule:** ambiguity, failed proof, stalled work without new evidence, or a new authority boundary.
+
+Task contracts govern procedures.
 
 ## Core Defaults
 - Inspect the real source, implementation, logs, artifacts, or host state before concluding. Separate verified facts from inference.
