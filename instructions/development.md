@@ -14,7 +14,8 @@ Use this file for implementation, debugging, refactoring, tests, repository main
 - Make the smallest behavior-owning change that solves the current problem.
 - Before broadening a bounded request into longer-term or production-ready work, present narrow and expanded options with the material time, complexity, and maintenance tradeoffs, then get the owner's choice.
 - Match local architecture, naming, error handling, dependency choices, and formatting unless changing them is part of the request.
-- Preserve public interfaces unless a breaking change is requested and its migration cost is understood.
+- Preserve released public interfaces and contracts with demonstrated consumers unless a breaking change is requested and its migration cost is understood. Do not assume backward compatibility is a goal merely because an old name or shape exists.
+- For unreleased, internal, one-shot, or agent-operated tools without active consumers or persisted state, prefer the clean requested change. Do not add aliases, duplicate fields, migration branches, deprecation periods, or other compatibility shims unless a real compatibility requirement is identified.
 - Add a helper, module, class, abstraction, or configuration surface only when it owns a real concept, removes demonstrated repetition, or protects an important boundary.
 - Avoid defensive code for impossible states, broad catches that hide failures, compatibility shims with no active consumer, and cleanup unrelated to the requested outcome.
 - When the consumer is another capable coding agent, prefer a clear contract, examples, and falsifiable checks over automation that tries to make the agent's decisions for it. Deterministic code should protect bytes, structure, protocol, or another mechanical invariant—not editorial, architectural, or situational judgment.
