@@ -29,3 +29,15 @@ After a failed or stuck run, do a root-cause pass before retrying: what stalled,
 - Keep scheduled prompts self-contained; future runs must not depend on hidden chat context.
 - Sanitize status and failures. Do not leak tokens, private IDs, raw logs, tracebacks, or unnecessary local paths.
 - Do not restart or stop a service from inside the active request path when it could kill the process producing the current response. Use an external control plane or ask the owner.
+
+### Owner-facing failure reports
+
+When adding or changing an automated job, failure handler, or watchdog, make its alerts understandable without opening logs:
+
+- Lead with the task and the specific problem: **“Daily report failure: the notification email could not be sent.”** Do not lead with a service name, error code, or internal component.
+- Explain what went wrong and why in plain language. Give the observed cause when known; otherwise say the cause is not yet known. Do not substitute a list of possible failures or present an inference as a diagnosis.
+- State the impact separately: what completed, what did not, and what remains unverified. A failed notification is not proof that the underlying task or saved result failed.
+- Include a recommended next step only when evidence supports it. Say whether the owner needs to act; do not promise an automatic retry or continued investigation unless it is actually arranged. Warn against rerunning completed work when that could duplicate it.
+- Keep raw logs, internal identifiers, paths, and detailed diagnostics available for investigation, not in the default alert. Keep the initial report short and specific rather than filling a template with irrelevant fields.
+
+The failure decision must also be truthful: distinguish work still running, work failed, and a check unable to establish the result. A missing completion record while the producer is legitimately running is not a failure. Verify this distinction and read the actual rendered alert as part of testing the failure path.
