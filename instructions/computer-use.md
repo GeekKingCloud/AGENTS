@@ -1,6 +1,6 @@
 # Computer-Use Preferences
 
-Use this file when working with browsers, GUIs, filesystems, terminals, media tools, or local apps.
+Use this file for browser/GUI interaction, shell or filesystem interaction hazards (such as shell/environment choice or destructive file operations), and media creation or delivery. Routine file reads or project-native commands alone do not trigger it. The root cleanup boundary and security rules still apply without this file.
 
 ## General rules
 

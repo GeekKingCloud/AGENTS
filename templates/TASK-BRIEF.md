@@ -18,9 +18,17 @@ Exact branch, repo, raw source, or ticket that decides correctness. Installed co
 
 Touch X, ignore Y, ask before Z.
 
+## Deliverable shape
+
+Guidance, implementation, diagnosis, evidence, or artifact; the least machinery needed by the intended operator.
+
 ## Autonomy
 
 act / recommend / ask before mutation / stop at review / local-only / specifically authorized remote actions.
+
+## Owner sequencing
+
+Requested outputs in order; report-then-continue or report-then-wait; explicit stop/approval gates and any real delivery/resumption limitation. Planning alone does not authorize significant implementation or expansion; preserve already-granted steps.
 
 ## Review approach, if warranted
 

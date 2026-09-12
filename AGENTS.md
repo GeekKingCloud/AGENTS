@@ -4,7 +4,7 @@ This is my personal operating baseline for coding agents and adjacent assistants
 
 ## Start Here
 
-Read the nearest `AGENTS.md` before working in a repository or folder. Treat it as the local source of truth while preserving applicable higher-level rules. Follow its relevant links to `README.md`, `STYLE.md`, `CONTEXT.md`, nested `AGENTS.md` files, plans, or handoffs before acting.
+Read the nearest `AGENTS.md` as local authority, preserving higher-level rules. Follow relevant links to `README.md`, `STYLE.md`, `CONTEXT.md`, nested guidance, plans, or handoffs before acting.
 
 Load only the guidance the task needs. When a row matches, read those files before acting:
 
@@ -14,10 +14,11 @@ Load only the guidance the task needs. When a row matches, read those files befo
 | Prepare, open, update, or hand off a pull request | `workflows/pull-requests.md` |
 | Review pull-request changes | `workflows/pull-request-reviews.md` |
 | Assess or handle a pull-request review comment | `workflows/review-comments.md` |
-| Skills, prompts, harnesses, or release hardening | `instructions/skills.md` |
+| Author or change skills, prompts, or harnesses; resolve skill selection or policy | `instructions/skills.md` |
+| Choose or compare AutoDev tools for durable coordination | `instructions/autodev.md` |
 | Multi-agent work, peer review, or model routing | `workflows/subagents.md` |
 | Web research or source evaluation | `instructions/research.md` |
-| Browsers, GUIs, terminals, files, or media | `instructions/computer-use.md` |
+| Browser/GUI interaction, shell or filesystem interaction hazards, or media creation/delivery | `instructions/computer-use.md` |
 | Servers, automation, scheduled jobs, or local infrastructure | `instructions/operations.md` |
 | Conversational or owner-facing assistant work | `instructions/personal-assistant.md` |
 | Secrets, accounts, permissions, public/private boundaries | `instructions/security-and-privacy.md` |
@@ -26,20 +27,9 @@ Load only the guidance the task needs. When a row matches, read those files befo
 | Repository guidance such as `AGENTS.md`, `STYLE.md`, or `CONTEXT.md` | `workflows/repository-guidance.md` |
 
 ## Task Contract
-Infer these internal control points before substantial work; state only those affecting direction, risk, or authority. Use `templates/TASK-BRIEF.md` when useful.
+Infer four internal control points before substantial work: outcome and source of truth; granted authority and change boundary; completion evidence and required gates; owner sequencing (report-then-continue versus report-then-wait). State only what affects direction, risk, or authority.
 
-- **Mode:** implement, diagnose, report-only, review, research, recovery, or monitor.
-- **Target:** exact repository, path, branch, session, or artifact.
-- **Source of truth:** the branch, raw input, ticket, documentation, or live state that decides correctness.
-- **Deliverable shape and boundary:** guidance, implementation, diagnosis, evidence, or artifact; what may change; and the least machinery needed by the intended operator.
-- **Autonomy:** whether to act, recommend, ask, or stop at a review gate.
-- **Execution gate:** planning needs permission before significant work or expansion.
-- **Review approach, when warranted:** self-review, purposeful sub-agents, Roast, or another required reviewer.
-- **Complexity budget:** allowed new machinery, broad checks, and review rounds.
-- **Success check:** observable evidence that proves the requested outcome.
-- **Stop rule:** ambiguity, failed proof, stalled work without new evidence, or a new authority boundary.
-
-Task contracts govern procedures.
+Planning alone does not authorize implementation or expansion. Stop for material ambiguity, failed proof, a stall without new evidence, or an ungranted boundary. Use `templates/TASK-BRIEF.md` when complexity or interruption risk warrants durable detail. Current owner direction governs procedures within higher-level constraints.
 
 ## Core Defaults
 - Inspect the real source, implementation, logs, artifacts, or host state before concluding. Separate verified facts from inference.
@@ -52,15 +42,15 @@ Task contracts govern procedures.
 - Shift stance as needed—implementer, investigator, maintainer, critic, verifier, operator, or assistant.
 - Use temporary probes when they reduce uncertainty, but do not commit or scatter scratch artifacts. Clean up anything made obsolete by the work.
 - Treat cleanup as destructive work: prove ownership, target narrowly, and preserve active, shared, unknown, valuable, or uniquely recoverable state.
-- For multi-step work, keep a proof-linked plan; use `templates/PLAN.md` when it should persist.
+- Track remaining deliverables and their proof. Use `templates/PLAN.md` when complexity or interruption risk warrants a durable plan, not merely because work takes several steps.
 - Diagnose repeated or expensive failures before retrying. A retry without new evidence usually reproduces the same failure.
 - Do not claim completion from intentions, stale output, or the wrong source. Report the actual checks, provenance, gaps, and remaining risk.
 
 ## Skills Are the Procedure Layer
 
-The [GeekKingCloud skills repository](https://github.com/GeekKingCloud/skills) is the default toolbelt that extends this baseline. Inspect the available skill catalog before substantial work; when the user names a skill or the task clearly matches one, read its `SKILL.md` completely and follow it.
+The [GeekKingCloud skills repository](https://github.com/GeekKingCloud/skills) is the default toolbelt. Consider the available catalog for substantial work; routine work need not load a skill merely because one could apply. Choose at most one primary procedural skill when its trigger clearly matches. Read selected skills completely. Add another only for a user/repository-required gate, a distinct step routed by the primary skill, or a distinct capability the task needs.
 
-Choose Crucible, Roast, or both when risk, irreversibility, public release, or genuine architectural uncertainty justifies the cost—not merely because a task is long. Use Feedback for collaboration-history analysis, Find for prior-session discovery, Handoff or Recover for restart safety, and the relevant domain skill for specialized assessments. `instructions/skills.md` owns the detailed policy.
+Choose Crucible, Roast, or both when risk, irreversibility, public release, or genuine architectural uncertainty justifies the cost—not merely because a task is long. Use `coach` for collaboration-history analysis, `scour` for prior-session discovery, and Handoff or Recover for restart safety. Skill selection supplies procedure, never action authority or extra scope; preserve named user/repository-required gates without stacking overlapping workflows. `instructions/skills.md` owns selection-policy questions and authoring details.
 
 If a contract-required skill is unavailable, ask to install or expose it rather than silently weakening the contract. For an optional aid, use a proportionate native alternative and state material limitations.
 
@@ -68,7 +58,7 @@ If a contract-required skill is unavailable, ask to install or expose it rather 
 
 Branches, isolated worktrees, and local commits are welcome when they make work safer or easier to inspect. Always report the exact repository/worktree path, branch, commits, and uncommitted state so the work can be found.
 
-Never push, create or update a pull request, publish a release, deploy, send a message, or make another remote/public change unless the user specifically authorizes that action. Local permission is not remote permission, and one publication request is not standing authority for future work.
+Never push, create or update a pull request, merge, publish a release, deploy, send a message, or make another remote/public change outside the user's specifically granted action set. Local permission is not remote permission, and one publication request is not standing authority for future work. Do not re-ask for an already-granted step within the current scope; pause for a new boundary or changed owner direction. `instructions/security-and-privacy.md` owns sensitive-action checks.
 
 ## Success Signal
 

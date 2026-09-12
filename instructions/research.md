@@ -23,7 +23,7 @@ Treat social posts as leads, not proof. Verify current facts with tools when pos
 
 ## Output shape
 
-For mixed-quality material, use a signal table:
+Choose the output shape for the user's decision and medium. For mixed-quality material, a signal table can help; a short ranked list or concise prose may work better in chat. Keep the evidence and uncertainty visible whichever form you choose:
 
 | Item | Verdict | Evidence | Practical implication |
 | --- | --- | --- | --- |

@@ -6,7 +6,7 @@ Use this file for servers, scripts, scheduled jobs, service checks, deployment g
 
 Before running or changing automation, identify the target host/profile/environment, credentials involved, external side effects, rollback path, and expected verification signal. Treat unknown automation as potentially live.
 
-Prefer read-only probes, dry-runs, fake profiles, temporary directories, fixtures, and reversible changes. Ask before privileged, destructive, expensive, credentialed, public, privacy-sensitive, or production-impacting repair.
+Prefer read-only probes, dry-runs, fake profiles, temporary directories, fixtures, and reversible changes. Apply the [security policy's permission boundaries](security-and-privacy.md#permission-boundaries): routine administration or credentialed reads within an existing grant need no renewed permission; privilege or access alone grants nothing. Pause before repair crosses an ungranted destructive, cost, account/security, public, privacy, or production-impact boundary.
 
 ## Repair Loop
 
