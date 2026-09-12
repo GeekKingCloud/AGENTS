@@ -1,15 +1,15 @@
 # Skill Preferences
 
-Use this file whenever a task names or clearly matches a reusable skill, or when substantial work needs a defined review, recovery, assessment, or publication procedure.
+Use this file when authoring or changing skills, prompts, or harnesses, or resolving a skill-selection or policy question. Routine use of a well-matched skill does not independently trigger this policy read.
 
 ## Default Toolbelt
 
 The [GeekKingCloud skills repository](https://github.com/GeekKingCloud/skills) is the default procedure layer for my work. Its `README.md` is the catalog and each skill's complete `SKILL.md` is the source of truth for that workflow.
 
 - Before using or editing the skills repository, read its nearest `AGENTS.md` and treat that as the repository source of truth.
-- Inspect the available skill catalog before substantial work.
-- If the user names a skill, add it to the plan, read its `SKILL.md` completely, and follow it.
-- Choose at most one primary procedural skill when its trigger clearly matches the task. Say why it applies, read it, and use it without waiting for the user to know its name.
+- Consider the available skill catalog for substantial work. Routine work need not load a skill merely because one could apply.
+- If the user or nearest repository requires a named skill, read its `SKILL.md` completely and follow the required gate within the current task's authority.
+- Choose at most one primary procedural skill when its trigger clearly matches the task. Read it completely before use; explain the choice only when it affects the approach or owner expectations. Proceed without a skill when none is needed.
 - Add another skill only when the user or nearest repository explicitly requires it, the primary skill routes to it for a distinct step, or it owns a distinct capability required by the task contract. Do not accumulate overlapping review, testing, release, orchestration, or assurance workflows; their gates are not automatically cumulative.
 - Read only the references the selected skill routes to, but read required instruction files completely.
 - Prefer scripts, templates, and assets supplied by the skill over re-creating them.
@@ -26,8 +26,8 @@ Do not silently simulate a required reviewer gate or replace it with an improvis
 | --- | --- |
 | High-risk implementation or release hardening | Crucible for orchestration, Roast for a strict evidence-backed gate, or both when each has a distinct purpose |
 | Blunt code, architecture, plan, or release-risk review | Roast |
-| Collaboration-history analysis and durable preference discovery | Feedback |
-| Locate a prior coding-agent conversation | Find |
+| Collaboration-history analysis and durable preference discovery | `coach` |
+| Locate a prior coding-agent conversation | `scour` |
 | Pause or transfer unfinished work | Handoff |
 | Resume after interruption, crash, or context loss | Recover |
 | Publish an authorized local change to GitHub | The GitHub publication/yeet workflow |

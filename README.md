@@ -9,10 +9,11 @@ The root `AGENTS.md` is the small, predictable entry point. It contains the dura
 | Path | Responsibility |
 | --- | --- |
 | `AGENTS.md` | Core preferences, task contract, routing, skill policy, and authority boundary. |
-| `instructions/development.md` | Software work, testing, Git practices, and AutoDev experiments. |
-| `instructions/skills.md` | First-class use of the GeekKingCloud skill toolbelt. |
+| `instructions/development.md` | Software work, testing taste, Git practices, and the native-agent default. |
+| `instructions/autodev.md` | Specialized tool selection and comparison for durable coordination. |
+| `instructions/skills.md` | Skill selection-policy questions and authoring skills, prompts, and harnesses. |
 | `instructions/research.md` | Source hierarchy and evidence-backed synthesis. |
-| `instructions/computer-use.md` | Browsers, GUIs, terminals, filesystems, and media. |
+| `instructions/computer-use.md` | Browser/GUI interaction, shell/filesystem hazards, and media creation/delivery. |
 | `instructions/operations.md` | Automation, services, long-running jobs, and safe repair. |
 | `instructions/personal-assistant.md` | Owner-facing communication and autonomy boundaries. |
 | `instructions/security-and-privacy.md` | Secrets, permissions, publishing, and private data. |
@@ -39,7 +40,7 @@ This shape follows the useful part of the [AGENTS.md convention](https://agents.
 - Skills own specialized reusable procedures and review machinery. Small local workflows own durable personal policies that need more detail than the root should carry; they do not duplicate a skill.
 - Sub-agents need a reason to exist. Roles such as proposer, skeptic, goal steward, verifier, and specialist create useful tension and evidence instead of parallel noise.
 - A capable coding agent working directly in its native harness is the default development loop. `lumber-hack`, `atoshell`, and `g8ldfish` remain useful experiments for durable decomposition, ticket state, and parallel execution when those costs are justified.
-- Local work is easy to authorize and inspect. Remote publication always requires a specific request.
+- Local work is easy to authorize and inspect. Remote publication needs specific authority; an already-granted step within the current scope does not need repeated permission.
 
 ## Editing This Repository
 

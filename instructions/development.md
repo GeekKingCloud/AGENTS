@@ -25,7 +25,7 @@ Use this file for implementation, debugging, refactoring, tests, repository main
 
 ## Finish the Implementation
 
-After the requested behavior works and before final verification or commit, use the [implementation finish workflow](../workflows/implementation-finish.md). Review the task diff and directly affected flow for unnecessary scaffolding, speculative flexibility, brittle tests, narration, and residue. Preserve behavior, trust boundaries, durable coverage, and supported compatibility; this is a proportional finish pass, not permission for a broad refactor.
+After the requested behavior works and before final verification or commit, review the task diff and directly affected flow for unnecessary scaffolding, speculative flexibility, brittle tests, narration, and residue. For a small change, one deliberate diff review can finish this pass; load the [implementation finish workflow](../workflows/implementation-finish.md) for substantial implementation or concrete residue needing attention. Preserve behavior, trust boundaries, durable coverage, and supported compatibility; this is not permission for a broad refactor.
 
 That workflow owns implementation quality and task-diff residue. Use the full [workspace cleanup workflow](../workflows/workspace-cleanup.md) when the task created substantial or multiple local resources, or when ownership, reversibility, or risk is non-trivial. Retire small, exact, clearly task-owned disposable debris directly without turning cleanup into a separate programme.
 
@@ -33,13 +33,13 @@ That workflow owns implementation quality and task-diff residue. Use the full [w
 
 When expected behavior is clear, prefer a concrete failing test or reproduction before the fix. Confirm that it fails for the right reason, implement the minimal correction, rerun the focused check, then broaden only when the changed surface warrants it.
 
-During iteration, use the smallest relevant test or subsystem check and batch logically related repairs before paying for a broader suite. Do not run the full repository suite after every small tweak or push trivial experiments merely to use hosted CI as a debugging loop. Run broader gates at meaningful integration milestones and the project-required full gate on the exact PR, merge, or release candidate; run them earlier when coupling, risk, or project rules make narrower evidence insufficient. Any later intersecting change invalidates only the evidence it can affect, not every unrelated check by default.
+Match proof to the changed behavior and preserve repository-required gates. The [verification workflow](../workflows/verification.md) owns focused versus broad check cadence, exact-candidate proof, and evidence invalidation; do not add a second cadence here.
 
 If no formal test harness exists, use the closest real proof: typecheck, lint, build, smoke command, fixture, snapshot inspection, dry-run, or source-backed manual verification. Do not change a test merely to make it pass, and do not contort production behavior around a bad assertion.
 
 Commit durable tests when they protect an observable contract, regression, edge case, security boundary, or workflow expectation that could plausibly break again. Do not promote every temporary probe into permanent test scaffolding.
 
-Use `workflows/verification.md` for proof states, provenance, and final claims.
+That workflow also owns proof states, provenance, and final claims.
 
 ## Git and Work Location
 
@@ -47,7 +47,7 @@ Use `workflows/verification.md` for proof states, provenance, and final claims.
 - Work in the current checkout for small isolated changes when safe. Prefer a dedicated branch and isolated worktree for substantial work, concurrent work, risky experiments, or when another agent may touch the original checkout.
 - Local commits are allowed when they create useful checkpoints or a reviewable unit. Include only intended changes and use the repository's commit convention.
 - Always report the exact repository or worktree path, branch, local commits, and remaining uncommitted state. Do not leave completed work hidden in an unnamed worktree.
-- Never push, create or update a pull request, merge, tag, release, or deploy without specific user authorization for that remote action. Ask when publication would be the useful next step.
+- Follow the [root authority boundary](../AGENTS.md#local-and-remote-authority) for pushes, pull requests, merges, tags, releases, and deployments. Use the current granted action set; ask only for a useful next step that falls outside it.
 - Before any authorized publication, inspect the diff and status, run the relevant checks, and report skipped proof or residual risk honestly.
 
 ### Commit and push cadence
@@ -64,16 +64,6 @@ Without current remote authorization, commit locally and hand off the exact path
 
 A capable coding agent working directly in its native harness is the default. It can inspect, plan, implement, verify, review, and iterate without adding orchestration machinery simply because that machinery exists.
 
-Escalate to the AutoDev tools only when durable coordination provides demonstrated value:
-
-| Tool | Owns | Does not own |
-| --- | --- | --- |
-| [`lumber-hack`](https://github.com/GeekKingCloud/lumber-hack) | Turning current/future state into a durable plan, ticket queue, and execution workflow. | The ticket database or implementation itself. |
-| [`atoshell`](https://github.com/GeekKingCloud/atoshell) | Ticket state, dependencies, assignments, comments, and status transitions. | Product specifications, planning judgment, or orchestration policy. |
-| [`g8ldfish`](https://github.com/GeekKingCloud/g8ldfish) | Parallel execution and verification of already-defined tickets. “Goldfish” may be used conversationally. | Deciding what should be built or decomposing an undefined goal. |
-
-The full pipeline is experimental, not a default dependency. Use it when durable decomposition, parallel ownership, recovery after interruption, auditability, or coordination across many agents outweighs setup and state-management overhead. Otherwise stay in the native harness.
-
-When evaluating the tools, compare the same representative task through direct agent execution, a Crucible-governed native run, and the full AutoDev pipeline. Judge delivery quality, elapsed effort, recovery, coordination clarity, and proof—not novelty or amount of machinery.
+When choosing or comparing AutoDev tools for a demonstrated durable-coordination need, read the [AutoDev reference](autodev.md). It is not a dependency of ordinary implementation.
 
 When software work adds or changes agent-facing project documentation, follow `workflows/repository-guidance.md` rather than inventing a second file taxonomy here.

@@ -16,14 +16,16 @@ Owner-facing or public reports should summarize the issue without dumping raw se
 
 ## Permission boundaries
 
-Ask before:
+Use the current granted action set under the [root authority boundary](../AGENTS.md#local-and-remote-authority); access to a system is not itself permission to change it. Do not ask again for an already-authorized step within that scope. Seek approval before crossing an ungranted boundary, including:
 
-- pushing commits, opening or updating pull requests, publishing releases, deploying, or otherwise changing remote/public state unless the current request explicitly authorizes that exact action
+- pushing commits, opening or updating pull requests, merging, publishing releases, deploying, or otherwise changing remote/public state
 - rotating credentials or changing account security
 - posting publicly or sending messages/emails to real people
 - purchasing services or incurring unusual cost
 - deleting data or running destructive commands
 - changing production permissions, firewall rules, OAuth scopes, or deploy keys
+
+Routine local administration and credentialed read-only lookups may be covered by an existing grant; neither privilege nor credential use alone demands renewed permission. Confirm that the grant covers the exact target and effects. New data exposure, production impact, account/security changes, destructive actions, cost, and public sends require approval when not already covered. Preserve explicit stop/approval gates and the [destructive-cleanup controls](../workflows/workspace-cleanup.md); a broad cleanup request is not blanket deletion authority.
 
 ## Public Artifacts and Fixtures
 

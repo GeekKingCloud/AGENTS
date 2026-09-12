@@ -29,4 +29,4 @@ Use [pull-request-reviews.md](pull-request-reviews.md) when reviewing the accumu
 
 Use the [handoff workflow](handoff.md) for restart-safe interrupted work; do not duplicate its state record in the pull-request description unless reviewers need that information.
 
-A request to implement, review, or commit does not authorize a push, pull-request creation or update, reviewer notification, merge, release, or deployment. Perform only the specifically authorized remote actions.
+A request to implement, review, or commit does not authorize a push, pull-request creation or update, reviewer notification, merge, release, or deployment. Follow the [root authority boundary](../AGENTS.md#local-and-remote-authority): perform the currently granted remote actions without renewed permission for each already-authorized step; ask before an ungranted action.
